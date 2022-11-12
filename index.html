@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tic Tac Toe </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Baskerville&family=Monoton&family=Open+Sans&family=Rye&family=Ultra&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+    <main>
+    <div id="playerInput">
+        <b><div id="playerName"></div></b>
+        <br /><br />
+        <div id="divSetPlayerName">
+            <input type="text" id="playerNameInput" placeholder="Enter name here" />
+            <button onclick="setPlayerName();">Set Name</button>
+        </div>
+
+        <b><div id="playerName2"></div></b>
+        <br /><br />
+        <div id="divSetPlayerName2">
+            <input type="text" id="playerNameInput2" placeholder="Enter name here" />
+            <button onclick="setPlayerName2();">Set Name</button>
+        </div>
+    </div>
+        <div class="playerInput">
+            <div class="playerOneInput">Player 1
+                <input type = "text" id = "p1Name" placeholder = " name " />
+                <button onclick="setPlayerName();">submit</button>
+            </div> 
+            
+            <div class="playerTwoInput">Player 2
+                <input type = "text" id = "p2Name" placeholder = " name ">               
+                <input type = "submit" value = "submit" id = "submitName">
+            
+        </div>
+    </main>
+    <div id="gameContainer">
+        <div id="cellContainer">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </div>
+        <h2 id="statusText"></h2>
+        <button id="restartBtn">Restart</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+        
