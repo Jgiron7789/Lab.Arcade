@@ -1,0 +1,104 @@
+
+* {
+    font-family: 'Alfa Slab One', cursive;
+    margin: 0px;
+    border: 0px;
+}
+header{
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    justify-content: center;
+    padding:22px;
+    margin-bottom: 70px;
+    color:rgb(168, 130, 36);
+    background-color: black;
+    min-width:  500px;
+    border-bottom: 1px solid lightslategray;
+}
+body {
+    box-sizing: border-box;
+    background-color: gainsboro;
+    min-width:  500px;
+}
+main {
+    min-width:  600px;
+}
+.playerInput {
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+#submitName {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: fit-content;
+}
+#p1Name {
+    margin-left: 10px;
+    max-width: 90px;    
+}
+#p2Name {
+    margin-left: 10px;
+    max-width: 90px;    
+}
+#playerInput {
+    display: flex;
+    background-color: aquamarine;
+    margin: 2px auto;
+    padding: 10px;
+    justify-content: space-evenly;
+    width: fit-content;
+    border-radius: 90px;
+    border: 1px solid lightslategray;
+    align-items: center;
+}
+.playerOneInput {
+    display: flex;
+    padding: 8px;
+    margin-left: 40px;
+    background-color: lightblue;
+    width: fit-content;
+    border-radius: 90px;
+    justify-content: space-between;
+    border: 1px solid lightslategray;
+}
+.playerTwoInput {
+    display: flex;
+    background-color:palevioletred;
+    padding: 8px;
+    margin-inline: auto;
+    margin-right: 40px;
+    width: fit-content;
+    border-radius: 90px;
+    border: 1px solid lightslategray;
+}
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 45px;
+    cursor: pointer;
+}
+#gameContainer{
+    text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+#statusText {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+#restartBtn {
+    margin-top: 20px;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
