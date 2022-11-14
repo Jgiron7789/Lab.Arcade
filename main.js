@@ -1,9 +1,10 @@
-const turnSelector = Math.floor(Math.random() * 2 + 1);
+let turnSelector = Math.floor(Math.random() * 2 + 1);
 console.log(turnSelector);
 
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
+const winList = document.querySelector('#winnerCounter');
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -17,7 +18,6 @@ const winConditions = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
-let playerOneName = document.getElementById("p1Name").value = "";
 
 initializeGame();
 
@@ -29,21 +29,39 @@ function initializeGame(){
 }
 
 function setPlayerName () {
-    let playerNameDiv = document.getElementById('playerName');
+    let playerNameDiv = document.getElementById('playerNameWrapper');
     
     playerNameDiv.innerHTML = document.getElementById('playerNameInput').value;
 
-    document.getElementById('divSetPlayerName').style.display = 'none';
+    document.getElementById('playerNameInput').style.display = 'none';
+    document.getElementById('setButton').style.display = 'none';
 }
 
-function setPlayerName2 () {
-    let playerNameDiv = document.getElementById('playerName2');
+function setPlayerTwoName () {
+    let playerTwoNameDiv = document.getElementById('playerTwoNameWrapper');
     
-    playerNameDiv.innerHTML = document.getElementById('playerNameInput2').value;
+    playerTwoNameDiv.innerHTML = document.getElementById('playerTwoNameInput').value;
 
-    document.getElementById('divSetPlayerName2').style.display = 'none';
+    document.getElementById('playerTwoNameInput').style.display = 'none';
+    document.getElementById('setButtonTwo').style.display = 'none';
 }
 
+function clearInput(){
+    let getValue = document.getElementById("playerNameInput");
+    if (getValue.value != "") {
+        getValue.value = "";
+        document.getElementById('playerNameInput').style.display = 'inline';
+        document.getElementById('setButton').style.display = 'inline';
+    }
+}
+function clearInputTwo(){
+    let getValue = document.getElementById("playerTwoNameInput");
+    if (getValue.value != "") {
+        getValue.value = "";
+        document.getElementById('playerTwoNameInput').style.display = 'inline';
+        document.getElementById('setButtonTwo').style.display = 'inline';
+    }
+}
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
@@ -99,5 +117,5 @@ function restartGame(){
     statusText.textContent = `Player ${turnSelector} goes first`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
-    
+    turnSelector = Math.floor(Math.random() * 2 + 1);
 }
